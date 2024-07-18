@@ -1,8 +1,14 @@
 import React from 'react'
-
+import { Button } from '@nextui-org/button'
 function Home() {
   return (
-    <div>Home</div>
+    <div>Home
+
+<Button color="primary">
+      Button
+    </Button>
+    </div>
+    
   )
 }
 
