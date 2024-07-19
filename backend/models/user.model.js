@@ -16,9 +16,13 @@ const UserSchema = new Schema(
             type: String,
             required: true,
         },
+        profilePicture: {
+            type: String,
+            default: 'https://i.pravatar.cc/150?u=a042581f4e29026704d',
+        },
     },
     { 
-        Timestamps: true 
+        timestamps: true 
     }
 );
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Card, Input, Button, Spinner } from "@nextui-org/react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import OAuth from "../../components/OAuth";
 
 export default function SignUp() {
     const [username, setUsername] = useState("");
@@ -173,6 +174,7 @@ export default function SignUp() {
                             "Sign Up"
                         )}
                     </Button>
+                    <OAuth/>
                 </form>
                 <div className="text-center">
                     <p className="text-sm text-gray-600">

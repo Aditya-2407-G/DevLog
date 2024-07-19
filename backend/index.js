@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRoutes from "./routes/user.routes.js";
 import authRoutes from "./routes/auth.routes.js";
+import cors from "cors";
 
 dotenv.config({
     path: "../.env",
@@ -18,6 +19,13 @@ mongoose
     });
 
 const app = express();
+
+app.use(cors(
+    {
+        origin: process.env.CORS_ORIGIN,
+        credentials: true
+    }
+));
 app.use(express.json());
 
 app.listen(3000, () => {
